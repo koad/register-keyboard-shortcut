@@ -35,7 +35,7 @@ BASE_PATH="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
 NEW_PATH="$BASE_PATH/$SCHEMA_NAME/"
 
 # Retrieve the current list of custom shortcuts from gsettings
-CURRENT_LIST=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings)
+CURRENT_LIST=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings | sed 's/^@as //')
 
 # Process the list string by removing brackets for easier manipulation
 CURRENT_LIST="${CURRENT_LIST#[}"
