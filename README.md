@@ -4,7 +4,7 @@ A simple bash script for creating and managing custom keyboard shortcuts in GNOM
 
 ## Overview
 
-This utility makes it easy to register and update custom keyboard shortcuts through the command line, without having to navigate through the GNOME Settings GUI. It's particularly useful for:
+This utility makes it easy to register, update, and remove custom keyboard shortcuts through the command line, without having to navigate through the GNOME Settings GUI. It's particularly useful for:
 
 - Setting up consistent shortcuts across multiple machines
 - Automating shortcut configuration in scripts
@@ -36,13 +36,17 @@ This utility makes it easy to register and update custom keyboard shortcuts thro
 ## Usage
 
 ```bash
-./command.sh "<Name>" "<Command>" "<Binding>"
+./command.sh "<Name>" "<Command>" "<Binding>" # defaults to add
+./command.sh add "<Name>" "<Command>" "<Binding>"
+./command.sh remove "<Name>"
 ```
 
 Or if you installed it to your PATH:
 
 ```bash
-register-shortcut "<Name>" "<Command>" "<Binding>"
+register-shortcut "<Name>" "<Command>" "<Binding>" # defaults to add
+register-shortcut add "<Name>" "<Command>" "<Binding>"
+register-shortcut remove "<Name>"
 ```
 
 ### Parameters:
